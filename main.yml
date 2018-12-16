@@ -1,0 +1,6 @@
+---
+- include: mysql.yml
+- include: php5.yml
+- include: phpmyadmin.yml
+- include: db.yml
+

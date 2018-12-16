@@ -1,0 +1,15 @@
+---
+- name: Create database
+    mysql_db: 
+        name: world 
+        login_user: 'root' 
+        login_password: "{{ mysql_root_pass }}"
+         state: present 
+          
+- name: Import data
+      mysql_db: 
+        name: world 
+        state: import 
+        target: world.sql 
+        login_user: 'root'
+        login_password: "{{ mysql_root_pass }}"
